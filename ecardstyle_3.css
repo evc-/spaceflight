@@ -1,0 +1,271 @@
+/*Ecard Style*/
+
+body {
+	overflow: hidden;
+}
+
+#entire_container {
+	margin: 0;
+	height: 100vh; 
+}
+
+#mainsvg {
+	min-width: 175vw;
+	min-height: 150vh;
+	max-width: 175vw;
+	max-height: 175vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#astrosvgid{
+	left: 100px;
+	top:200px;
+	position: absolute;
+	
+}
+
+#vostokfact .cls-13:hover, #spiralfact .cls-13:hover, #speechfact .cls-13:hover, #flagfact .cls-13:hover, #footprintfact .cls-13:hover, #challengerfact .cls-13:hover, #femaleshipfact .cls-13:hover, #spacewalkfact .cls-13:hover, #astrofact .cls-13:hover, #issfact .cls-13:hover, #sevenfact .cls-13:hover {
+	r: 40;
+	transition: r 0.5s ease; 
+}
+
+#vostokfact .cls-13, #spiralfact .cls-13, #speechfact .cls-13, #flagfact .cls-13, #footprintfact .cls-13, #challengerfact .cls-13, #femaleshipfact .cls-13, #spacewalkfact .cls-13, #astrofact .cls-13, #issfact .cls-13, #sevenfact .cls-13, #tv_body .cls-13 {
+	r: 26.81;
+	transition: r 0.5s ease;
+}
+
+#star1, #star2, #star3, #star4, #star5, #star6, #star7 {
+	opacity: 1;
+	transition: 0.3s ease;
+}
+
+#star1:hover, #star2:hover, #star3:hover, #star4:hover, #star5:hover, #star6:hover, #star7:hover {
+	opacity: 0.2;
+	transition: 0.3s ease;
+}
+
+#tvbutton:hover{
+	r: 55;
+	transition: r 0.5s ease;
+}
+
+#tvbutton{
+	r: 38;
+	transition: r 0.5s ease;
+}
+
+#earth {
+    transition: all 1s ease-in-out 0s;
+	transform-origin:center;
+}
+
+#earth:hover {
+	transform: rotate(360deg);
+    transition: all 1s ease-in-out 0s;
+	transform-origin: center;
+}
+
+#innerorbit {
+	opacity: 0.2;
+  	transition: opacity 0.3s;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#innerorbit:hover {
+	opacity: 0.7;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#factbox {
+	position:fixed;
+	background-color: #cccccc;
+	display: block;
+	font-family: 'Roboto Slab', serif;
+	text-align: center;
+	max-width: 725px;
+	left: 0;
+	right:0;
+	bottom:30px;
+	margin: auto;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+#yuri:hover {
+    cursor:pointer;
+}
+
+#audioplay_container {
+	background-image: url(speaker.svg);
+	height: 60px;
+	width: 60px;
+	position: fixed;
+	top: 20px;
+	left: 80px;
+}
+
+#audiomute_container {
+	background-image: url(mute.svg);
+	height: 60px;
+	width: 60px;
+	position: fixed;
+	top: 20px;
+	left: 80px;
+}
+
+#sputnik {
+	transform: translate(0px,0px);
+	transition: 2s;
+}
+
+#spiral{
+	opacity: 1;
+}
+
+#spiral:hover {
+	opacity: 0.5;
+	transition: 1s;
+	filter: url("#blur");
+}
+
+
+#iframemoon {
+	display: none;
+	top:100px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+	height:0px;
+	width:0px;
+	position:absolute;
+}
+
+
+/*
+#starfield {
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+*/
+
+
+#starrysky {
+	opacity: 0.02;
+}
+
+@keyframes drift {
+	0% {transform: translateX(-1200px) translateY(100px);}
+	50% {transform: translateX(-1250px) translateY(100px);}
+	100% {transform: translateX(-1200px) translateY(100px);}
+}
+
+#newplanets #planet5 {
+	animation: drift 1s ease; }
+
+#newplanets #planet5:hover{
+	animation: drift 3s ease; }
+
+
+/*
+
+@keyframes scaleani {
+0% { transform: translate(0px, 0px); }
+25% { transform: translate(366px,50px);}
+50% { transform: translate(150px, 75px);}
+100% { transform: translate(0px, 0px);}
+}
+
+#newplanets #planet5:hover{
+	animation: scaleani 10s ease;
+*/
+/*	transform-origin: 0% 0%;*/
+}
+
+
+/*REJECT*/
+
+/*
+#newplanets #planet6:hover, #newplanets #planet1:hover, #newplanets #planet2:hover, #newplanets #planet3:hover, #newplanets #planet4:hover, #newplanets #planet7:hover{
+	animation: scaleani 10s ease infinite;
+	transform-origin: 0,0,0;
+}
+*/
+
+/*
+#spacewalk:hover{
+	animation: scaleani 20s linear infinite;
+	transform-origin: 0,0;
+}
+*/
+
+/*
+#newplanets:hover{
+	animation: scaleani 1s linear infinite;
+	transform-origin: center;
+}
+*/
+
+
+/*
+#newplanetsstars{
+	animation: scaleani 1s linear infinite;
+}
+
+#newplanetsstars:hover{
+	animation: scaleani 2s linear infinite;
+}
+*/
+
+
+/*
+#planet1, #planet2, #planet3, #planet4, #planet5 .cls-38, #planet6, #planet7 {
+	r:75.6; 
+	transition: 1s ease;
+}
+
+#planet1:hover, #planet2:hover, #planet3:hover, #planet4:hover, #planet5 .cls-38:hover, #planet6:hover, #planet7:hover{
+	r:50;
+	transition: 1s ease;
+}
+*/
+
+/*
+#seven_planets #planet5 .cls-38 {
+	r:75.6; 
+	transition: 1s ease;
+}
+
+#seven_planets #planet5 .cls-38:hover{
+	r:50;
+	transition: 1s ease;
+}
+*/
+
+
+/*
+
+@keyframes starzoom {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(2.0);
+        -webkit-transform: scale(2.0);
+    }
+}
+
+#starfield:hover {
+    animation: starzoom 30s ease-in-out infinite alternate;
+    -webkit-animation: starzoom 30s ease-in-out infinite alternate;
+}
+
+#starfield {
+    animation: starzoom 30s ease-in-out infinite alternate;
+    -webkit-animation: starzoom 30s ease-in-out infinite alternate;
+}
+*/
