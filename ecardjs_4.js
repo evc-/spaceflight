@@ -549,6 +549,9 @@ star10.addEventListener("click", function (){
 //	planet6 = document.getElementById("planet6"),
 //	planet7 = document.getElementById("planet7");
 
+var xPlanet = -1500;
+var yPlanet = 100;
+
 star11.addEventListener("click", function (){
 	show(idsFound[10]);
 	show(ids[10]);	
@@ -558,44 +561,44 @@ star11.addEventListener("click", function (){
 	factDisplay(facts[10]);
 
 	setTimeout(function(){ 
-		moveID("planet1", -1500, 100);
-		moveID("planet1_star", -1500, 100);
+		moveID("planet1", xPlanet, yPlanet);
+		moveID("planet1_star", -100, 2000);
 		show("planet1_star");
 		}, 100);
 	
 	setTimeout(function(){ 
-		moveID("planet2", -1400, 100);
-		moveID("planet2_star", -1400, 100);
+		moveID("planet2", xPlanet, yPlanet+70);
+		moveID("planet2_star", -100, 1900);
 		show("planet2_star");
 		}, 200);
 	
 	setTimeout(function(){ 
-		moveID("planet3", -1500, 100);
-		moveID("planet3_star", -1500, 100);
+		moveID("planet3", xPlanet, yPlanet);
+		moveID("planet3_star", -100, 1900);
 		show("planet3_star");
 		}, 300);
 	
 	setTimeout(function(){ 
-		moveID("planet4", -1200, 300);
-		moveID("planet4_star", -1200, 300);
+		moveID("planet4", xPlanet, yPlanet);
+		moveID("planet4_star", -100, 1900);
 		show("planet4_star");
 		}, 300);
 	
 	setTimeout(function(){ 
-		moveID("planet5", -1600, 100);
-		moveID("planet5_star", -1600, 100);
+		moveID("planet5", xPlanet, yPlanet-70);
+		moveID("planet5_star", -100, 1600);
 		show("planet5_star");
 		}, 500);
 	
 	setTimeout(function(){ 
-		moveID("planet6", -2200, 500);
-		moveID("planet6_star", -2200, 500);
+		moveID("planet6", xPlanet, yPlanet);
+		moveID("planet6_star", -100, 1700);
 		show("planet6_star");
 		}, 600);
 	
 	setTimeout(function(){ 
-		moveID("planet7", -1400, 100);
-		moveID("planet7_star", -1400, 100);
+		moveID("planet7", xPlanet, yPlanet);
+		moveID("planet7_star", -100, 1900);
 		show("planet7_star");
 		}, 700);
 	
