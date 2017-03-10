@@ -3,7 +3,7 @@
 
 
 
-var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1", "iframemoon"];
+var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1", "iframemoon", "hint"];
 
 //add try error to ignore ids that haven't been created yet 
 
@@ -559,10 +559,8 @@ document.getElementById("planet1_star").addEventListener("click", function(){
 //earth click hint 
 
 document.getElementById("earth").addEventListener("click", function(){
-	var hint = document.createElement("P");
-	hint.setAttribute("id", "hint");
-	hint.style.position = "fixed";
-	hint.innerHTML= "April 12 is all about humankind's journeyy's to outer space. Click on the stars around earth, and hover on each element to learn more.";
-	document.body.appendChild(hint);
-	
+	hideAll();
+	hideClass("newastro1");
+	hideClass("leonov");
+	show("hint");
 })
