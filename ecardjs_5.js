@@ -1,7 +1,7 @@
 //ecard script
 
 
-//date in space
+//moments.js date in space
 moment().format();
 
 var today = new Date();
@@ -152,7 +152,7 @@ factBox.innerHTML = "April 12 is \"International Day of Human Space Flight\"! <b
 		factBox.innerHTML = challengerVictims;
 	}
 
-//AUDIO FUNCTIONS
+//audio functions
 
 var yurispeech = document.getElementById("yuri");
 
@@ -188,12 +188,12 @@ function cloneAstro(x, y){
 	var move = "translate(" + x +"," + y + ")";
 	newAstro.setAttribute("transform" , move);
 	appendSVG.appendChild(newAstro);
+	
+	//fun fact- if you append newAstro to astroExist, you make more astronauts than there are atoms in the universe :P 
 }
 
 
-
-
-//START
+//start
 
 function start(){
 	
@@ -227,8 +227,6 @@ var star1 = document.getElementById("vostokfact"),
 	star9 = document.getElementById("astrofact"),
 	star10 = document.getElementById("issfact"),
 	star11 = document.getElementById("sevenfact");
-
-//var factBar = document.getElementById("factbar");
 
 //vostok
 star1.addEventListener("click", function (){
@@ -307,7 +305,6 @@ star5.addEventListener("click", function (){
 })
 
 //moon landing video
-
 var tvScreen = document.getElementById("tv_screen");
 var tvButton = document.getElementById("tvbutton");
 var iframeMoon = document.getElementById("iframemoon");
@@ -392,7 +389,6 @@ polygons[6].addEventListener("click", function(){
 
 
 //female ships
-
 star7.addEventListener("click", function (){
 	hideAll([ids[6], idsFound[6]]);
 	hideClass("newastro1");
