@@ -166,7 +166,6 @@ function cloneAstro(x, y){
 
 function start(){
 	
-	hideAll();
 	
 	for (var i = 0; i < ids.length; i++){
 		hide(ids[i]);
