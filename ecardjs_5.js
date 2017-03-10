@@ -3,7 +3,7 @@
 
 
 
-var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1"];
+var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1", "iframemoon"];
 
 //add try error to ignore ids that haven't been created yet 
 
