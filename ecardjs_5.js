@@ -188,6 +188,8 @@ function start(){
 start()
 
 
+
+
 var star1 = document.getElementById("vostokfact"), 
 	star2 = document.getElementById("speechfact"),
 	star3 = document.getElementById("spiralfact"),
@@ -556,11 +558,4 @@ document.getElementById("planet1_star").addEventListener("click", function(){
 	hide("newplanetstars")
 })
 
-//earth click hint 
 
-document.getElementById("earth").addEventListener("click", function(){
-	hideAll();
-	hideClass("newastro1");
-	hideClass("leonov");
-	show("hint");
-})
