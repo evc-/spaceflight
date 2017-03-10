@@ -55,9 +55,9 @@ var facts = ["On April 12 1961, an astronaut from the USSR named Yuri Gagarin be
 			
 "The Space Race was not all about victories - the rush to beat the other country into space came with tragedies. The USA Challenger mission disaster was one of the worst, with 7 fatalities due to cold weather and material failure. However, the root issue was politual pressure resulting in rushed engineering and disregarded safety measures.", 
 			
-"The first woman in space was a USSR astronaut and former civilian parachutist named Valentina Tereshkova. She entered orbit on June 16, 1963 on board the Soviet mission Vostok 6. Sally Ride was the first American austronaut in space, twenty years and 2 days later.", 
+"The first woman in space was a USSR astronaut and former civilian parachutist named Valentina Tereshkova. She entered orbit on June 16, 1963 on board the Soviet mission Vostok 6. Sally Ride was the first female American austronaut in space, twenty years and 2 days later.", 
 			 
-"In 1965, Alexey Leonov conducted the first spacewalk. He was outside the Voshhod 2 spacecraft for 12 minutes, connected by a tether. In the vaccuum of space, his suit became so inflated that he couldnt back fit inside the ship's airlock system. Knowing that his spacewalk was a political accomplishment, he didn't relay his problem to ground control. Instead, he opened a value to release some of the suits pressure, and squeezed back inside.",
+"In 1965, Alexey Leonov conducted the first spacewalk. He was outside the Voshhod 2 spacecraft for 12 minutes, connected by a tether. In the vaccuum of space, his suit became so inflated that he couldnt back fit inside the ship's airlock system. Knowing that his spacewalk was a political accomplishment, he didn't relay his problem to ground control. Instead, he opened a value to release some of the suits pressure, and squeezed back inside. <a href= \"http://gizmodo.com/50-years-ago-the-first-spacewalk-nearly-ended-in-trage-1692303108\" target =\"_blank\">Read more here.</a>",
 			 
 "In the 55 years since Gagarin's orbit around the Earth, 536 individuals have voyaged into space.",
 			 
