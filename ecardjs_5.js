@@ -38,7 +38,9 @@ var facts = ["On April 12 1961, an astronaut from the USSR named Yuri Gagarin be
 			 
 "\"Nothing will stop us. The road to the stars is steep and dangerous. But we're not afraid . . . Space flights can't be stopped. This isn't the work of one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.\" - Yuri Gagarin",
 			
-"The Challenger Disaster may have shocked the nation, but it was not suprising to a team of engineers who worked on the launch. The morning of the launch, engineer Bob Ebeling said \"The Challenger's going to blow up. Everyone's going to die.\" <br><br> Sections of the rockets filled with expolsive propellant would pull apart slightly with the force of takeoff. Rubber O-rings lined these joints to provide a seal. In earlier tests, cold weather made the O-rings stiff, and prone to breakage and expolsive leakage. The launch morning was colder than any other tests. Ebeling and four other engineers tried desperately to stop the launch, but they were overruled by NASA and their managers.<br> <a href= \"http://www.wnyc.org/story/30-years-after-disaster-challenger-engineer-still-blames-himself/\" target=\"_blank\">Listen to an interview with Ebeling here.</a> "];
+"The Challenger Disaster may have shocked the nation, but it was not suprising to a team of engineers who worked on the launch. The morning of the launch, engineer Bob Ebeling said \"The Challenger's going to blow up. Everyone's going to die.\" <br><br> Sections of the rockets filled with expolsive propellant would pull apart slightly with the force of takeoff. Rubber O-rings lined these joints to provide a seal. In earlier tests, cold weather made the O-rings stiff, and prone to breakage and expolsive leakage. The launch morning was colder than any other tests. Ebeling and four other engineers tried desperately to stop the launch, but they were overruled by NASA and their managers.<br> <a href= \"http://www.wnyc.org/story/30-years-after-disaster-challenger-engineer-still-blames-himself/\" target=\"_blank\">Listen to an interview with Ebeling here.</a> ",
+
+"Turn on audio, and hover on each element when they appear to discover hidden facts and interactions!"];
 
 var challengerVictims = ["Francis R. Scobee, Commander",
 			 
@@ -558,4 +560,8 @@ document.getElementById("planet1_star").addEventListener("click", function(){
 	hide("newplanetstars")
 })
 
+
+document.getElementById("earth").addEventListener("click", function(){
+	factDisplay(facts[14]);
+})
 
