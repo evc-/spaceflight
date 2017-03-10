@@ -226,6 +226,7 @@ star2.addEventListener("click", function (){
 	show(idsFound[1]);
 	show(ids[1]);
 	show(ids[0]);
+	move(objects[0], 625, -1000);
 	show("designer");
 	hide("yuri");
 	factDisplay(facts[1]);
