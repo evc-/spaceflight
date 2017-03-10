@@ -96,6 +96,7 @@ body {
 	background-color: #cccccc;
 	display: block;
 	font-family: 'Roboto Slab', serif;
+	font-size: 1.1em;
 	text-align: center;
 	max-width: 725px;
 	left: 0;
@@ -106,7 +107,7 @@ body {
 	padding: 10px;
 }
 
-#yuri:hover, #vostok:hover, #tvbutton:hover, #ship:hover, #challenger:hover, #spacewalk:hover {
+#yuri:hover, #vostok:hover, #tvbutton:hover, #ship:hover, #challenger:hover, #spacewalk:hover, #astro:hover, #iss:hover {
     cursor:pointer;
 }
 
@@ -157,10 +158,13 @@ body {
 }
 
 
+/*
 #starrysky {
 	opacity: 0.02;
 }
+*/
 
+/*
 @keyframes drift {
 	0% {transform: translateX(-1200px) translateY(100px);}
 	50% {transform: translateX(-1250px) translateY(100px);}
@@ -172,6 +176,7 @@ body {
 
 #newplanets #planet5:hover{
 	animation: drift 3s ease; }
+*/
 
 .leonov {
 	position: fixed;

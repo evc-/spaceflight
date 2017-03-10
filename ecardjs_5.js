@@ -359,6 +359,7 @@ document.getElementById("ship").addEventListener("click", function(){
 
 //DO FOR LOOP INSTEAD
 
+
 polygons[0].addEventListener("click", function(){
 	challengerDisplay(challengerVictims[0])
 })
