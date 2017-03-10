@@ -4,13 +4,6 @@ body {
 	overflow: hidden;
 }
 
-/*
-@keyframes fadein {
-	0% {opacity:1;}
-	100%{opacity:0;}
-}
-*/
-
 #entire_container {
 	margin: 0;
 	height: 100vh; 
@@ -40,12 +33,10 @@ body {
 	transform: translate(-50%,-50%);
 }
 
-
 #astrosvgid{
 	left: 100px;
 	top:200px;
 	position: absolute;
-	
 }
 
 #vostokfact .cls-13:hover, #spiralfact .cls-13:hover, #speechfact .cls-13:hover, #flagfact .cls-13:hover, #footprintfact .cls-13:hover, #challengerfact .cls-13:hover, #femaleshipfact .cls-13:hover, #spacewalkfact .cls-13:hover, #astrofact .cls-13:hover, #issfact .cls-13:hover, #sevenfact .cls-13:hover {
@@ -165,27 +156,6 @@ body {
 	width:0px;
 	position:absolute;
 }
-
-
-/*
-#starrysky {
-	opacity: 0.02;
-}
-*/
-
-/*
-@keyframes drift {
-	0% {transform: translateX(-1200px) translateY(100px);}
-	50% {transform: translateX(-1250px) translateY(100px);}
-	100% {transform: translateX(-1200px) translateY(100px);}
-}
-
-#newplanets #planet5 {
-	animation: drift 1s ease; }
-
-#newplanets #planet5:hover{
-	animation: drift 3s ease; }
-*/
 
 .leonov {
 	position: fixed;

@@ -1,8 +1,5 @@
 //ecard script
 
-
-
-
 var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1", "iframemoon", "hint"];
 
 //add try error to ignore ids that haven't been created yet 
@@ -188,9 +185,6 @@ function start(){
 }
 
 start()
-
-
-
 
 var star1 = document.getElementById("vostokfact"), 
 	star2 = document.getElementById("speechfact"),
@@ -449,9 +443,6 @@ star10.addEventListener("click", function (){
 	factDisplay(facts[9]);
 })
 
-
-
-
 //moments.js date in space
 moment().format();
 
@@ -476,7 +467,6 @@ var b = moment();
 var issdays = -((a.diff(b, 'days')%31));
 var issmonths = -((a.diff(b, 'months')%12));
 var issyears = -((a.diff(b, 'years')));
-
 
 //console.log(a.diff(b, 'days')%31);
 //console.log(a.diff(b, 'months')%12);
