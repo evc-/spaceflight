@@ -5,8 +5,9 @@ var sHeight; //screen height
 var canvas;
 var context;
 var numOfStars;
-var starDensity = 4000; //lower = more stars
+var starDensity = 4500; //lower = more stars
 var starColors = ["#d8c1e5", "#381d4e", "#cccccc", "#b1c1e5"];
+
 
 //Get the window size
 sWidth = $(window).width();
@@ -19,6 +20,7 @@ canvas = $('#starfield');
 canvas.attr('height', sHeight);
 canvas.attr('width', sWidth);
 context = canvas[0].getContext('2d');
+context.globalAlpha = 0.6;
 
 //Calculate the number of stars
 numOfStars = Math.floor((sWidth * sHeight) / starDensity);
@@ -26,6 +28,7 @@ console.log(numOfStars);
 
 //Draw the stars
 function stars() {
+	
   for (i=0;i<numOfStars;i++) {
     //Get a random star color
     var starColor = starColors[Math.floor(Math.random()*starColors.length)];
@@ -39,7 +42,30 @@ function stars() {
     context.fillStyle = starColor;
     context.fill();
   }
+	
 }
 
+
+
+//function myFade() {
+//    context.globalAlpha = 1;
+//	var myInterval = setInterval(myFade, 1000);
+//	}
+
+
 //Draw the stars
-stars();
+stars()
+
+//$(document).ready(function(){
+//	console.log("running");
+//	
+//	myFade();
+//	console.log(myFade());
+//});
+
+	
+
+
+
+
+

@@ -1,6 +1,42 @@
-//Ecard Script
+//ecard script
 
-var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik"];
+
+//date in space
+moment().format();
+
+var today = new Date();
+var day = today.getDate();
+var month = today.getMonth()+1; 
+var year = today.getFullYear();
+
+if(day<10) {
+    day='0'+day
+} 
+
+if(month<10) {
+    month='0'+month
+} 
+
+today = month+'/'+day+'/'+year;
+console.log(today);
+
+var a = moment([2000, 10, 2]);
+var b = moment();
+var issdays = -((a.diff(b, 'days')%31));
+var issmonths = -((a.diff(b, 'months')%12));
+var issyears = -((a.diff(b, 'years')));
+
+
+//console.log(a.diff(b, 'days')%31);
+//console.log(a.diff(b, 'months')%12);
+//console.log(a.diff(b, 'years'));
+
+//console.log(moment([2000, 10, 2]).fromNow());
+
+
+var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1"];
+
+//add try error to ignore ids that haven't been created yet 
 
 var idsFound = ["found_vostok", "found_speech", "found_spiral", "found_flag", "found_footprint","found_challenger", "found_femaleship", "found_spacewalk", "found_astro", "found_iss", "found_sevenplanets"];
 
@@ -21,11 +57,11 @@ var facts = ["On April 12 1961, an astronaut from the USSR named Yuri Gagarin be
 			
 "The first woman in space was a USSR astronaut and former civilian parachutist named Valentina Tereshkova. She entered orbit on June 16, 1963 on board the Soviet mission Vostok 6. Sally Ride was the first American austronaut in space, twenty years and 2 days later.", 
 			 
-"In 1965, Alexey Leonov conducted the first spacewalk. He was outside the Voshhod 2 spacecraft for 12 minutes, connected by a tether. In the vaccuum of space, his suit became inflated, so much that he couldnt back fit inside the complicated airlock system. Knowing that his spacewalk was a political accomplishment and message, he didn't relay his problem to ground control. Instead, he opened a value to release some of the suits pressure, and squeezed back inside.",
+"In 1965, Alexey Leonov conducted the first spacewalk. He was outside the Voshhod 2 spacecraft for 12 minutes, connected by a tether. In the vaccuum of space, his suit became so inflated that he couldnt back fit inside the ship's airlock system. Knowing that his spacewalk was a political accomplishment, he didn't relay his problem to ground control. Instead, he opened a value to release some of the suits pressure, and squeezed back inside.",
 			 
 "In the 55 years since Gagarin's orbit around the Earth, 536 individuals have voyaged into space.",
 			 
-"Today, the International Space Station is the largest artificial body in orbit. As of Feb 20th, it's been occupied by humans for 16 years, 3 months, and 18 days - The longest human presence in space.",
+"Today, the International Space Station is the largest artificial body in orbit. As of today, " + today + " , it's been occupied by humans for " + issyears + " years, " + issmonths + " months, " + issdays + " days - The longest human presence in space.",
 			 
 "On 22 February 2017, astronomers from NASA's Spitzer Science Center announced that they had found \"seven, rocky, Earth-sized planets that could potentially have liquid water, orbiting around a very nearby, cold, small star.\" The planetary system is called Trappist-1. Elon Musk of SpaceX envisions human settlements with over a million people on Mars by the 2060s.<br> What do you think the future of human space travel holds?",
 			 
@@ -56,7 +92,31 @@ var factBox = document.getElementById("factbox");
 factBox.innerHTML = "April 12 is \"International Day of Human Space Flight\"! <br>Start with the top star and click clockwise to learn about humans in space.";
 
 	function hide(id){
+		try{
 		document.getElementById(id).style.display = "none";
+		}  catch(err){
+					  }
+	}
+
+	function hideAll(doNotHide){
+		
+ 		for(i=0;i<ids.length;i++){
+			
+				if(doNotHide.includes(ids[i])){					
+				}else{
+					hide(ids[i]);
+					}
+				}
+			}
+
+	function hideClass(className){
+		var astroClones = document.getElementsByClassName(className);
+		
+		for (i=0; i < astroClones.length; i++){
+			try {
+				astroClones[i].style.display = "none";
+		} catch(err){}
+		}
 	}
 
 	function show(id){
@@ -115,54 +175,7 @@ function muteAudio(){
 	audioPlayButton.pause();
 	hide("audiomute_container");
 	show("audioplay_container");
-	
 }
-
-
-
-//function createAstro (x,y, h, w){
-//	var astroDIV = document.createElement("DIV");
-//	astroDIV.innerHTML = astroSVG;
-//	astroDIV.style.left = x + "px";
-//	astroDIV.style.top = y + "px";
-//	astroDIV.style.height = h + "px";
-//	astroDIV.style.width = w + "px";
-//	astroDIV.style.position = "fixed";
-//	astroDIV.style.backgroundColor = "red";
-//	astroAppend.appendChild(astroDIV);
-//}
-
-//function createAstro(){
-//
-//	var astroAppend = document.getElementById("astro");
-//	
-//  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-//	
-//	svg.setAttribute('style', 'border: 1px solid black');
-//	svg.setAttribute('width', '600px');
-//	svg.setAttribute('height', '250px');
-//	svg.setAttribute('position', 'absolute');
-//	svg.setAttribute('left', '100px');
-//	svg.setAttribute('top', '200px');
-//	svg.setAttribute('id', 'astrosvgid');	svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-//	document.body.appendChild(svg);
-//}
-
-
-//createAstro(100, 500, 69.32, 100.51);
-//	console.log(createAstro);
-
-//function createAstro(){
-//	var astroAppend = document.getElementById("astro");
-//	var astroNew = astroAppend.cloneNode(true);
-//	astroNew.setAttribute = 
-//	console.log(astroNew);
-//}
-
-
-//	function getRandomInt(min, max) {
-//    	return Math.floor(Math.random() * (100 - 50 + 1)) + 50;
-//		}
 
 
 var astroExist = document.getElementById("astro");
@@ -170,16 +183,10 @@ var appendSVG = document.getElementById("mainsvg");
 
 function cloneAstro(x, y){
 	var newAstro = astroExist.cloneNode(true);
-	newAstro.id = "newastro1";
+	newAstro.className = "newastro1";
 	newAstro.setAttribute("position", "relative");
-	
-//	newAstro.setAttribute("top", i);
-//	newAstro.setAttribute("left", j);
-	
 	var move = "translate(" + x +"," + y + ")";
 	newAstro.setAttribute("transform" , move);
-	console.log(move);
-	
 	appendSVG.appendChild(newAstro);
 }
 
@@ -225,6 +232,10 @@ var star1 = document.getElementById("vostokfact"),
 
 //vostok
 star1.addEventListener("click", function (){
+	hideAll([ids[0], idsFound[0]]);
+	console.log(document.getElementsByClassName("newastro1"));
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[0]);
 	show(ids[0]);
 	console.log(ids[0]);
@@ -239,22 +250,26 @@ document.getElementById("vostok").addEventListener("click", function(){
 
 //speech
 star2.addEventListener("click", function (){
+	hideAll([ids[0], idsFound[0], ids[1], idsFound[1]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[1]);
 	show(ids[1]);
+	show("designer");
 	hide("yuri");
 	factDisplay(facts[1]);
 	
 	setTimeout(function(){ 
 		show("yuri"); }, 500);
-
 })
 
 //spiral
 star3.addEventListener("click", function (){
+	hideAll([ids[2], idsFound[2]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[2]);
 	show(ids[2]);
-	hide(ids[0]);
-	hide(ids[1]);
 	scaleUp(objects[2], 2750, 2350, 4.5);
 	factDisplay(facts[2]);
 })
@@ -265,14 +280,13 @@ document.getElementById("spiral").addEventListener("click", function(){
 
 //raceflag and sputnik
 star4.addEventListener("click", function (){
+	hideAll([idsFound[3], ids[3]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[3]);
 	show(ids[3]);
-
-	hide(ids[0, 1, 2]);
-	console.log(objects[11]);
 	factDisplay(facts[3]);
 
-	
     setTimeout(function(){ 
 		show(ids[11]);
 		moveID("sputnik", 1200, -900);
@@ -283,9 +297,11 @@ star4.addEventListener("click", function (){
 
 //moon landing
 star5.addEventListener("click", function (){
+	hideAll([ids[4], idsFound[4]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[4]);
 	show(ids[4]);
-	hide(ids[0, 1, 2, 3]);
 	factDisplay(facts[4]);
 	
 })
@@ -328,9 +344,11 @@ var iframeMoon = document.getElementById("iframemoon");
 
 //challenger
 star6.addEventListener("click", function (){
+	hideAll([ids[5], idsFound[5]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[5]);
 	show(ids[5]);
-	hide(ids[0, 1, 2, 3, 4]);
 	hide("iframemoon");
 	factDisplay(facts[5]);
 	
@@ -343,9 +361,6 @@ document.getElementById("ship").addEventListener("click", function(){
 //show challenger victims
 
 //DO FOR LOOP INSTEAD
-
-console.log(polygons[0]);
-console.log(challengerVictims[0]);
 
 polygons[0].addEventListener("click", function(){
 	challengerDisplay(challengerVictims[0])
@@ -376,30 +391,18 @@ polygons[6].addEventListener("click", function(){
 })
 
 
-//star7.addEventListener("click", function (){
-//	show(idsFound[6]);
-//	
-//	moveID("ussr_ship", 1669, -930);
-//	show(ids[6]);
-//	hide(ids[0, 1, 2, 3, 4, 5]);
-//	hide("american_ship");
-//	factDisplay(facts[6]);
-//	
-//	setTimeout(function(){ 
-//		moveID("american_ship", 1669, -930);
-//		show("american_ship"); }, 500);
-//	
-//})
-
 //female ships
 
 star7.addEventListener("click", function (){
+	hideAll([ids[6], idsFound[6]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[6]);
 	show(ids[6]);
 	hide("ussr_ship");
 	hide("american_ship");
-	hide(ids[0, 1, 2, 3, 4, 5]);
 	factDisplay(facts[6]);
+	
 	setTimeout(function(){
 		show("ussr_ship");
 		moveID("ussr_ship",1669, -930);
@@ -423,120 +426,66 @@ star7.addEventListener("click", function (){
 
 //spacewalk
 star8.addEventListener("click", function (){
+	hideAll([ids[7], idsFound[7]]);
+	hideClass("newastro1");
 	show(idsFound[7]);
 	show(ids[7]);
-	hide(ids[0, 1, 2, 3, 4, 5, 6]);
-	move(objects[7], -900, -950);
+	move(objects[7], -900, -1050);
 	factDisplay(facts[7]);
 })
 
 document.getElementById("spacewalk").addEventListener("click", function(){
-	console.log("clicking");
 	var leonov = document.createElement("IMG");
     leonov.setAttribute("src", "firstspacewalk.jpg");
-	leonov.setAttribute("id", "leonov");
+	leonov.setAttribute("class", "leonov");
    	leonov.setAttribute("alt", "First Spacewalk");
 	document.body.appendChild(leonov);
 })
 
 //astro
 star9.addEventListener("click", function (){
+	hideAll([ids[8], idsFound[8]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[8]);
 	show(ids[8]);
-	hide(ids[0, 1, 2, 3, 4, 5, 6, 7]);
 	factDisplay(facts[8]);
-//	moveID("astro", 0, 900);
 	})
 
 document.getElementById("astro").addEventListener("click", function(){
 	for (var j = 0; j < 5; j++){
 			for (var i = 0; i < 9; i++){
 				cloneAstro(i*150, j*175);
-				console.log(i);
-				console.log(j);
-					
 			}
 		}
 	
 })
 
-//	
-//	setTimeout(function(){
-//		for (var j = 0; j < 3; j++){
-//			for (var i = 0; i < 3; i++){
-//				cloneAstro(i*200, j*300);
-//				console.log(i);
-//				console.log(j);
-//				
-//			}
-//		}
-//		
-//	}, 1000);
-//	
-//	setTimeout(function(){
-//		for (var j = 0; j < 3; j++){
-//			for (var i = 0; i < 3; i++){
-//				cloneAstro(i*-200, j*-300);
-//				console.log(i);
-//				console.log(j);
-//				
-//			}
-//		}
-//		
-//	}, 2000);
-	
-	
-	
-//	cloneAstro(-200,0);
-//	cloneAstro(-400,0);
-//	cloneAstro(-600,0);
-//		
-	
-//	setTimeout(function(){
-//		for (var j = 0; j < 3; j++){
-//			for (var i = 0; i < 3; i++){
-//				cloneAstro(i-100, j-100);
-//			}
-//		}
-//		
-//	}, 2000);
-		
-	
-//	createAstro();
-//	console.log(createAstro);
-//	createAstro(100, 500, 69.32, 100.51);
-//	console.log(createAstro);
-
-
 //iss
 star10.addEventListener("click", function (){
+	hideAll([ids[9], idsFound[9]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[9]);
 	show(ids[9]);
-	hide(ids[0, 1, 2, 3, 4, 5, 6, 7, 8]);
 	move(objects[9], 1400, -850);
 	factDisplay(facts[9]);
 })
 
 
-//sevenplanets
 
-//var planet1 = document.getElementById("planet1"),
-//	planet2 = document.getElementById("planet2"),
-//	planet3 = document.getElementById("planet3"),
-//	planet4 = document.getElementById("planet4"),
-//	planet5 = document.getElementById("planet5"),
-//	planet6 = document.getElementById("planet6"),
-//	planet7 = document.getElementById("planet7");
-
+//seven planets
 var xPlanet = -1500;
 var yPlanet = 100;
 
 star11.addEventListener("click", function (){
+	hideAll([ids[10],idsFound[10]]);
+	hideClass("newastro1");
+	hideClass("leonov");
 	show(idsFound[10]);
 	show(ids[10]);	
 	hide("newplanets");
-	show("newplanetstars");	
-	hide(ids[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);		
+	show("newplanetstars");		
 	factDisplay(facts[10]);
 
 	setTimeout(function(){ 
@@ -584,62 +533,6 @@ star11.addEventListener("click", function (){
 })
 
 document.getElementById("planet1_star").addEventListener("click", function(){
-	console.log("clicked");
 	show("newplanets");	
 	hide("newplanetstars")
 })
-
-console.log(document.getElementById("seven_planets").getBoundingClientRect());
-
-
-
-
-
-
-//purple rain demo
-//
-//var astros = [];
-//
-//function setup() {
-//  createCanvas(640, 360);
-//  for (var i = 0; i < 500; i++) {
-//    astros[i] = new Drop();
-//  }
-//}
-//
-//function draw() {
-//  for (var i = 0; i < 536; i++) {
-//    astros[i].fall();
-//    astros[i].show();
-//  }
-//}
-//
-//function Drop() {
-//  this.x = random(width);
-//  this.y = random(-500, -50);
-//  this.z = random(0, 20);
-//  this.len = map(this.z, 0, 20, 10, 20);
-//  this.yspeed = map(this.z, 0, 20, 1, 20);
-//
-//  this.fall = function() {
-//    this.y = this.y + this.yspeed;
-//    var grav = map(this.z, 0, 20, 0, 0.2);
-//    this.yspeed = this.yspeed + grav;
-//
-//    if (this.y > height) {
-//      this.y = random(-200, -100);
-//      this.yspeed = map(this.z, 0, 20, 4, 10);
-//    }
-//  }
-//
-//  this.show = function() {
-//    var thick = map(this.z, 0, 20, 1, 3);
-//    strokeWeight(thick);
-//    stroke(138, 43, 226);
-//    line(this.x, this.y, this.x, this.y+this.len);
-//  }
-//}
-
-
-
-

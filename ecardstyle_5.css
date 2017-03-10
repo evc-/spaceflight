@@ -106,7 +106,7 @@ body {
 	padding: 10px;
 }
 
-#yuri:hover {
+#yuri:hover, #vostok:hover, #tvbutton:hover, #ship:hover, #challenger:hover, #spacewalk:hover {
     cursor:pointer;
 }
 
@@ -141,6 +141,7 @@ body {
 	opacity: 0.5;
 	transition: 1s;
 	filter: url("#blur");
+	cursor: pointer;
 }
 
 
@@ -154,15 +155,6 @@ body {
 	width:0px;
 	position:absolute;
 }
-
-
-/*
-#starfield {
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-*/
 
 
 #starrysky {
@@ -181,123 +173,13 @@ body {
 #newplanets #planet5:hover{
 	animation: drift 3s ease; }
 
-#leonov {
+.leonov {
 	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: -1;
 	width: 100vw;
 	height: 100vh;
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
-
-/*
-@keyframes scaleastro {
-	0% {transform: rotate(0deg);}
-	
-	50% {transform: rotate(2deg);}
-	
-	100% {transform: rotate(0deg);}
-}
-*/
-
-/*
-
-@keyframes scaleani {
-0% { transform: translate(0px, 0px); }
-25% { transform: translate(366px,50px);}
-50% { transform: translate(150px, 75px);}
-100% { transform: translate(0px, 0px);}
-}
-
-#newplanets #planet5:hover{
-	animation: scaleani 10s ease;
-*/
-/*	transform-origin: 0% 0%;*/
-}
-
-
-/*REJECT*/
-
-/*
-#newplanets #planet6:hover, #newplanets #planet1:hover, #newplanets #planet2:hover, #newplanets #planet3:hover, #newplanets #planet4:hover, #newplanets #planet7:hover{
-	animation: scaleani 10s ease infinite;
-	transform-origin: 0,0,0;
-}
-*/
-
-/*
-#spacewalk:hover{
-	animation: scaleani 20s linear infinite;
-	transform-origin: 0,0;
-}
-*/
-
-/*
-#newplanets:hover{
-	animation: scaleani 1s linear infinite;
-	transform-origin: center;
-}
-*/
-
-
-/*
-#newplanetsstars{
-	animation: scaleani 1s linear infinite;
-}
-
-#newplanetsstars:hover{
-	animation: scaleani 2s linear infinite;
-}
-*/
-
-
-/*
-#planet1, #planet2, #planet3, #planet4, #planet5 .cls-38, #planet6, #planet7 {
-	r:75.6; 
-	transition: 1s ease;
-}
-
-#planet1:hover, #planet2:hover, #planet3:hover, #planet4:hover, #planet5 .cls-38:hover, #planet6:hover, #planet7:hover{
-	r:50;
-	transition: 1s ease;
-}
-*/
-
-/*
-#seven_planets #planet5 .cls-38 {
-	r:75.6; 
-	transition: 1s ease;
-}
-
-#seven_planets #planet5 .cls-38:hover{
-	r:50;
-	transition: 1s ease;
-}
-*/
-
-
-/*
-
-@keyframes starzoom {
-    0% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-    }
-    100% {
-        transform: scale(2.0);
-        -webkit-transform: scale(2.0);
-    }
-}
-
-#starfield:hover {
-    animation: starzoom 30s ease-in-out infinite alternate;
-    -webkit-animation: starzoom 30s ease-in-out infinite alternate;
-}
-
-#starfield {
-    animation: starzoom 30s ease-in-out infinite alternate;
-    -webkit-animation: starzoom 30s ease-in-out infinite alternate;
-}
-*/
