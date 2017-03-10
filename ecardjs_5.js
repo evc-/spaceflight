@@ -1,37 +1,6 @@
 //ecard script
 
 
-//moments.js date in space
-moment().format();
-
-var today = new Date();
-var day = today.getDate();
-var month = today.getMonth()+1; 
-var year = today.getFullYear();
-
-if(day<10) {
-    day='0'+day
-} 
-
-if(month<10) {
-    month='0'+month
-} 
-
-today = month+'/'+day+'/'+year;
-console.log(today);
-
-var a = moment([2000, 10, 2]);
-var b = moment();
-var issdays = -((a.diff(b, 'days')%31));
-var issmonths = -((a.diff(b, 'months')%12));
-var issyears = -((a.diff(b, 'years')));
-
-
-//console.log(a.diff(b, 'days')%31);
-//console.log(a.diff(b, 'months')%12);
-//console.log(a.diff(b, 'years'));
-
-//console.log(moment([2000, 10, 2]).fromNow());
 
 
 var ids = ["vostok", "speech_bubbles", "spiral", "race_flag", "tvset", "challenger", "female_ships", "spacewalk", "astro", "iss", "seven_planets", "sputnik", "leonov", "newastro1"];
@@ -61,7 +30,7 @@ var facts = ["On April 12 1961, an astronaut from the USSR named Yuri Gagarin be
 			 
 "In the 55 years since Gagarin's orbit around the Earth, 536 individuals have voyaged into space.",
 			 
-"Today, the International Space Station is the largest artificial body in orbit. As of today, " + today + " , it's been occupied by humans for " + issyears + " years, " + issmonths + " months, " + issdays + " days - The longest human presence in space.",
+"Today, the International Space Station is the largest artificial body in orbit.",
 			 
 "On 22 February 2017, astronomers from NASA's Spitzer Science Center announced that they had found \"seven, rocky, Earth-sized planets that could potentially have liquid water, orbiting around a very nearby, cold, small star.\" The planetary system is called Trappist-1. Elon Musk of SpaceX envisions human settlements with over a million people on Mars by the 2060s.<br> What do you think the future of human space travel holds?",
 			 
@@ -439,6 +408,8 @@ document.getElementById("spacewalk").addEventListener("click", function(){
 	document.body.appendChild(leonov);
 })
 
+
+
 //astro
 star9.addEventListener("click", function (){
 	hideAll([ids[8], idsFound[8]]);
@@ -467,6 +438,52 @@ star10.addEventListener("click", function (){
 	show(ids[9]);
 	move(objects[9], 1400, -850);
 	factDisplay(facts[9]);
+})
+
+
+
+
+//moments.js date in space
+moment().format();
+
+var today = new Date();
+var day = today.getDate();
+var month = today.getMonth()+1; 
+var year = today.getFullYear();
+
+if(day<10) {
+    day='0'+day
+} 
+
+if(month<10) {
+    month='0'+month
+} 
+
+today = month+'/'+day+'/'+year;
+console.log(today);
+
+var a = moment([2000, 10, 2]);
+var b = moment();
+var issdays = -((a.diff(b, 'days')%31));
+var issmonths = -((a.diff(b, 'months')%12));
+var issyears = -((a.diff(b, 'years')));
+
+
+//console.log(a.diff(b, 'days')%31);
+//console.log(a.diff(b, 'months')%12);
+//console.log(a.diff(b, 'years'));
+
+//console.log(moment([2000, 10, 2]).fromNow());
+
+document.getElementById("iss").addEventListener("click", function(){
+	var dynamicDate = document.createElement("P");
+	dynamicDate.setAttribute("id", "dynamicdate");
+	dynamicDate.style.position = "fixed";
+	dynamicDate.style.top ="50px";
+	dynamicDate.style.right ="50px";
+	dynamicDate.innerHTML= "As of today, " + today + " , it's been occupied by humans for " + issyears + " years, " + issmonths + " months, " + issdays + " days. The longest human presence in space ever!";
+	factBox.appendChild(dynamicDate);
+	
 })
 
 

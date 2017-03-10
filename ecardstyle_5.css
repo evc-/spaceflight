@@ -188,3 +188,11 @@ body {
 	opacity: 0.5;
 }
 
+#dynamicdate{
+	background-color: #fdae88;
+	max-width: 200px;
+	border-radius: 6px;
+	font-size: 0.9em;
+	padding: 5px;
+}
+
