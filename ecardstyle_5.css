@@ -205,3 +205,19 @@ body {
 	padding: 5px;
 }
 
+
+
+#hint{
+	background-color: #fdae88;
+	max-width: 200px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 6px;
+	font-size: 0.9em;
+	padding: 5px;
+}
+
+

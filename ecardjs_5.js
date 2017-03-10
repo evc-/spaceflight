@@ -555,3 +555,14 @@ document.getElementById("planet1_star").addEventListener("click", function(){
 	show("newplanets");	
 	hide("newplanetstars")
 })
+
+//earth click hint 
+
+document.getElementById("earth").addEventListener("click", function(){
+	var hint = document.createElement("P");
+	hint.setAttribute("id", "hint");
+	hint.style.position = "fixed";
+	hint.innerHTML= "April 12 is all about humankind's journeyy's to outer space. Click on the stars around earth, and hover on each element to learn more.";
+	document.body.appendChild(hint);
+	
+})
