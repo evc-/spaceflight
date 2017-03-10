@@ -4,10 +4,18 @@ body {
 	overflow: hidden;
 }
 
+/*
+@keyframes fadein {
+	0% {opacity:1;}
+	100%{opacity:0;}
+}
+*/
+
 #entire_container {
 	margin: 0;
 	height: 100vh; 
 }
+
 
 #mainsvg {
 	min-width: 175vw;
@@ -32,9 +40,6 @@ body {
 	transform: translate(-50%,-50%);
 }
 
-#vostok, #speech_bubbles, #spiral, #race_flag, #tvset, #challenger, #female_ships, #astro, #iss, #seven_planets, #sputnik, #leonov, #newastro1{
-	display: none;
-}
 
 #astrosvgid{
 	left: 100px;

@@ -165,7 +165,8 @@ function cloneAstro(x, y){
 //start
 
 function start(){
-	
+		
+	document.getElementById("mainsvg").style.opacity = "1";
 	
 	for (var i = 0; i < ids.length; i++){
 		hide(ids[i]);
@@ -184,7 +185,8 @@ function start(){
 	
 }
 
-start();
+start()
+
 
 var star1 = document.getElementById("vostokfact"), 
 	star2 = document.getElementById("speechfact"),
